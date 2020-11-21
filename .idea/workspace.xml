@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="712a53ad-1b4a-48cd-a0cc-06c5c3ceb0a2" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/usr/lib/go" />
+  <component name="ProjectId" id="1kQXl3DfgCwzEgfpMv0ZUPn79X2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="go build github.com/FardinDaDev/test_game" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Game_In_GO" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="github.com/FardinDaDev/test_game" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build github.com/FardinDaDev/test_game" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="753" y="389" width="404" height="301" key="#Go_Modules" timestamp="1605634050712">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="753" y="389" width="404" height="301" key="#Go_Modules/0.0.1920.1080@0.0.1920.1080" timestamp="1605634050712" />
+    <state width="1844" height="276" key="GridCell.Tab.0.bottom" timestamp="1605969335460">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1844" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1605969335460" />
+    <state width="1844" height="276" key="GridCell.Tab.0.center" timestamp="1605969335459">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1844" height="276" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1605969335459" />
+    <state width="1844" height="276" key="GridCell.Tab.0.left" timestamp="1605969335459">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1844" height="276" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1605969335459" />
+    <state width="1844" height="276" key="GridCell.Tab.0.right" timestamp="1605969335460">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1844" height="276" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1605969335460" />
+    <state width="1844" height="341" key="GridCell.Tab.1.bottom" timestamp="1605916258328">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1844" height="341" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1605916258328" />
+    <state width="1844" height="341" key="GridCell.Tab.1.center" timestamp="1605916258328">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1844" height="341" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1605916258328" />
+    <state width="1844" height="341" key="GridCell.Tab.1.left" timestamp="1605916258328">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1844" height="341" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1605916258328" />
+    <state width="1844" height="341" key="GridCell.Tab.1.right" timestamp="1605916258328">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1844" height="341" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1605916258328" />
+    <state x="685" y="242" width="540" height="595" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1605789813822">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="685" y="242" width="540" height="595" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1605789813822" />
+    <state x="623" y="267" width="672" height="678" key="search.everywhere.popup" timestamp="1605960828225">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="267" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1605960828225" />
+  </component>
+</project>
