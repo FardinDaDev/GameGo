@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="712a53ad-1b4a-48cd-a0cc-06c5c3ceb0a2" name="Default Changelist" comment="" />
+    <list default="true" id="712a53ad-1b4a-48cd-a0cc-06c5c3ceb0a2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +17,12 @@
     </option>
   </component>
   <component name="GOROOT" path="/usr/lib/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="167e555b-67bb-4bbf-9084-aa11a97336b4" />
+  </component>
   <component name="ProjectId" id="1kQXl3DfgCwzEgfpMv0ZUPn79X2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -57,22 +65,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="753" y="389" width="404" height="301" key="#Go_Modules/0.0.1920.1080@0.0.1920.1080" timestamp="1605634050712" />
-    <state width="1844" height="276" key="GridCell.Tab.0.bottom" timestamp="1605969508107">
+    <state width="1844" height="276" key="GridCell.Tab.0.bottom" timestamp="1605970876093">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1844" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1605969508107" />
-    <state width="1844" height="276" key="GridCell.Tab.0.center" timestamp="1605969508105">
+    <state width="1844" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1605970876093" />
+    <state width="1844" height="276" key="GridCell.Tab.0.center" timestamp="1605970876090">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1844" height="276" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1605969508105" />
-    <state width="1844" height="276" key="GridCell.Tab.0.left" timestamp="1605969508103">
+    <state width="1844" height="276" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1605970876090" />
+    <state width="1844" height="276" key="GridCell.Tab.0.left" timestamp="1605970876089">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1844" height="276" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1605969508103" />
-    <state width="1844" height="276" key="GridCell.Tab.0.right" timestamp="1605969508106">
+    <state width="1844" height="276" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1605970876089" />
+    <state width="1844" height="276" key="GridCell.Tab.0.right" timestamp="1605970876091">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1844" height="276" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1605969508106" />
+    <state width="1844" height="276" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1605970876091" />
     <state width="1844" height="341" key="GridCell.Tab.1.bottom" timestamp="1605916258328">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -89,10 +97,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1844" height="341" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1605916258328" />
-    <state x="439" y="188" key="SettingsEditor" timestamp="1605970357732">
+    <state x="437" y="186" key="SettingsEditor" timestamp="1605970936611">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="439" y="188" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1605970357732" />
+    <state x="437" y="186" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1605970936611" />
     <state x="685" y="242" width="540" height="595" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1605789813822">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
