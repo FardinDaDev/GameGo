@@ -27,6 +27,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RunManager">
     <configuration name="go build github.com/FardinDaDev/test_game" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -88,6 +89,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1844" height="341" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1605916258328" />
+    <state x="439" y="188" key="SettingsEditor" timestamp="1605970357732">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="439" y="188" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1605970357732" />
     <state x="685" y="242" width="540" height="595" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1605789813822">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
