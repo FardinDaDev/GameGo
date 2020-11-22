@@ -1,8 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="712a53ad-1b4a-48cd-a0cc-06c5c3ceb0a2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/game/texture_wrapper.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/foo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/viewport.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/window.go" beforeDir="false" afterPath="$PROJECT_DIR$/game/window.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,11 +51,15 @@
     <option name="defaultAccountId" value="167e555b-67bb-4bbf-9084-aa11a97336b4" />
   </component>
   <component name="ProjectId" id="1kQXl3DfgCwzEgfpMv0ZUPn79X2" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -43,7 +74,7 @@
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
       <filePath value="$PROJECT_DIR$/main.go" />
-      <package value="github.com/FardinDaDev/test_game" />
+      <package value="github.com/FardinDaDev/GoGame" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
@@ -57,6 +88,21 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
@@ -65,38 +111,42 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="753" y="389" width="404" height="301" key="#Go_Modules/0.0.1920.1080@0.0.1920.1080" timestamp="1605634050712" />
-    <state width="1844" height="276" key="GridCell.Tab.0.bottom" timestamp="1605970876093">
+    <state x="551" y="195" width="804" height="686" key="#Plugins" timestamp="1605975992297">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1844" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1605970876093" />
-    <state width="1844" height="276" key="GridCell.Tab.0.center" timestamp="1605970876090">
+    <state x="551" y="195" width="804" height="686" key="#Plugins/0.0.1920.1080@0.0.1920.1080" timestamp="1605975992297" />
+    <state width="1844" height="219" key="GridCell.Tab.0.bottom" timestamp="1606089302391">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1844" height="276" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1605970876090" />
-    <state width="1844" height="276" key="GridCell.Tab.0.left" timestamp="1605970876089">
+    <state width="1844" height="219" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1606089302391" />
+    <state width="1844" height="219" key="GridCell.Tab.0.center" timestamp="1606089302390">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1844" height="276" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1605970876089" />
-    <state width="1844" height="276" key="GridCell.Tab.0.right" timestamp="1605970876091">
+    <state width="1844" height="219" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1606089302390" />
+    <state width="1844" height="219" key="GridCell.Tab.0.left" timestamp="1606089302389">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1844" height="276" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1605970876091" />
-    <state width="1844" height="341" key="GridCell.Tab.1.bottom" timestamp="1605916258328">
+    <state width="1844" height="219" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1606089302389" />
+    <state width="1844" height="219" key="GridCell.Tab.0.right" timestamp="1606089302391">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1844" height="341" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1605916258328" />
-    <state width="1844" height="341" key="GridCell.Tab.1.center" timestamp="1605916258328">
+    <state width="1844" height="219" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606089302391" />
+    <state width="1844" height="341" key="GridCell.Tab.1.bottom" timestamp="1606086846905">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1844" height="341" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1605916258328" />
-    <state width="1844" height="341" key="GridCell.Tab.1.left" timestamp="1605916258328">
+    <state width="1844" height="341" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1606086846905" />
+    <state width="1844" height="341" key="GridCell.Tab.1.center" timestamp="1606086846904">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1844" height="341" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1605916258328" />
-    <state width="1844" height="341" key="GridCell.Tab.1.right" timestamp="1605916258328">
+    <state width="1844" height="341" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1606086846904" />
+    <state width="1844" height="341" key="GridCell.Tab.1.left" timestamp="1606086846904">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1844" height="341" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1605916258328" />
+    <state width="1844" height="341" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1606086846904" />
+    <state width="1844" height="341" key="GridCell.Tab.1.right" timestamp="1606086846905">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1844" height="341" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606086846905" />
     <state x="437" y="186" key="SettingsEditor" timestamp="1605970936611">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -105,9 +155,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="685" y="242" width="540" height="595" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1605789813822" />
-    <state x="623" y="267" width="672" height="678" key="search.everywhere.popup" timestamp="1605960828225">
+    <state x="623" y="267" width="672" height="678" key="search.everywhere.popup" timestamp="1606086573414">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="267" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1605960828225" />
+    <state x="623" y="267" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1606086573414" />
   </component>
 </project>

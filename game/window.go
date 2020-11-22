@@ -37,20 +37,23 @@ func (w *Window) Init(title string, x int32, y int32, width int32, height int32,
 		os.Exit(2)
 	}
 
-	w.Renderer, w.err = sdl.CreateRenderer(w.Window, -1, sdl.RENDERER_ACCELERATED)
+	w.Renderer, w.err = sdl.CreateRenderer(w.Window, -1, sdl.RENDERER_ACCELERATED | sdl.RENDERER_PRESENTVSYNC)
 
 	if w.err != nil {
 		fmt.Fprintf(os.Stderr, "Failed to create renderer: %s\n", w.err)
 		os.Exit(2)
 	}
 
+	if err := img.Init(img.INIT_JPG | img.INIT_PNG); err != nil {
+		fmt.Fprintf(os.Stderr, "Failed to load img: %s\n", w.err)
+		os.Exit(2)
+	}
+	sdl.SetHint(sdl.HINT_RENDER_SCALE_QUALITY, "1")
+
 	w.Running = true
 }
 
 func (w *Window) LoadTexture(path string) *sdl.Texture {
-	img.Init(img.INIT_JPG | img.INIT_PNG)
-	sdl.SetHint(sdl.HINT_RENDER_SCALE_QUALITY, "1")
-
 	surfaceImg, err := img.Load(path)
 
 	if err != nil {
@@ -69,9 +72,19 @@ func (w *Window) LoadTexture(path string) *sdl.Texture {
 }
 
 
+
 func (w *Window) Render() {
-	w.Renderer.SetDrawColor(255, 255, 55, 255)
+	w.Renderer.SetDrawColor(255, 255, 255, 100)
 	w.Renderer.Clear()
+
+	fooTexture := LoadFromFile(w.Renderer, "./img/foo.png")
+	backgroundTexture := LoadFromFile(w.Renderer, "./img/background.png")
+
+	backgroundTexture.Render(w.Renderer, 0, 0)
+	fooTexture.Render(w.Renderer, 240, 190)
+
+	defer fooTexture.Destroy()
+	defer backgroundTexture.Destroy()
 
 	w.Renderer.Present()
 }
@@ -92,11 +105,13 @@ func (w *Window) EventHandler() {
 }
 
 func (w *Window) Update() {
-	//
+	//fmt.Println("Update...")
 }
 
 func (w *Window) Clear() {
 	w.Renderer.Destroy()
 	w.Window.Destroy()
+
+	img.Quit()
 	sdl.Quit()
 }
