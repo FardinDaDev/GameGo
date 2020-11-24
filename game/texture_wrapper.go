@@ -13,15 +13,15 @@ type TextureWrapper struct {
 	height  int32
 }
 
-func Init() *TextureWrapper {
+func NewTextureWrapper() *TextureWrapper {
 	return &TextureWrapper{
 		texture: nil,
-		width: 0,
-		height: 0,
+		height:  0,
+		width:   0,
 	}
 }
 
-func LoadFromFile(renderer *sdl.Renderer, path string) (t *TextureWrapper) {
+func (t *TextureWrapper) LoadFromFile(renderer *sdl.Renderer, path string) ( *TextureWrapper) {
 	loadedSurface, err := img.Load(path)
 
 	if err != nil {
@@ -37,11 +37,11 @@ func LoadFromFile(renderer *sdl.Renderer, path string) (t *TextureWrapper) {
 
 	t = &TextureWrapper{
 		texture: newTexture,
-		height:  loadedSurface.H,
-		width:   loadedSurface.W,
+		height: loadedSurface.H,
+		width: loadedSurface.W,
 	}
 
-	loadedSurface.Free()
+	defer loadedSurface.Free()
 
 	return t
 }
@@ -58,12 +58,13 @@ func (t *TextureWrapper) SetColor(red, green, blue uint8) {
 	t.texture.SetColorMod(red, green, blue)
 }
 
+
 func (t *TextureWrapper) LoadFromRenderedText(renderer *sdl.Renderer, font *ttf.Font, textureText string, textureColor sdl.Color) {
 
 	textSurface, err := font.RenderUTF8Solid(textureText, textureColor)
 
 	if err != nil {
-		fmt.Println("Couldn't render SDL ttf text ", err)
+		fmt.Println("Couldn't render SDL ttf text", err)
 	}
 
 	newTexture, err := renderer.CreateTextureFromSurface(textSurface)

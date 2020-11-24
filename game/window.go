@@ -8,12 +8,25 @@ import (
 	"os"
 )
 
+//Global Variables (messy)
 var (
 	degrees      float64          = 0
 	flipType     sdl.RendererFlip = sdl.FLIP_NONE
 	arrowTexture *TextureWrapper
-	font *ttf.Font
-	textTexture *TextureWrapper
+	font         *ttf.Font
+	textTexture  *TextureWrapper
+
+	gButton [TOTAL_BUTTONS]MouseButton
+	gButtonSpriteSheetTexture *TextureWrapper
+	BUTTON_WIDTH, BUTTON_HEIGHT int32 = 300, 200
+	gSpriteClips [TOTAL_BUTTONS]sdl.Rect
+)
+
+//Constants (Global Variable)
+const (
+	TOTAL_BUTTONS int = 4
+	SCREEN_WIDTH = 1920 //TODO: Removing SCREEN_WIDTH & SCREEN_HEIGHT...
+	SCREEN_HEIGHT = 1080
 )
 
 type Window struct {
@@ -26,7 +39,7 @@ type Window struct {
 	Running  bool
 }
 
-func (w *Window) Init(title string, x int32, y int32, width int32, height int32, fullscreen bool) {
+func (w *Window) NewWindow(title string, x int32, y int32, width int32, height int32, fullscreen bool) {
 	if err := sdl.Init(sdl.INIT_EVERYTHING); err != nil {
 		fmt.Fprintf(os.Stderr, "Failed to initialise SDL2: %s\n", w.err)
 		os.Exit(1)
@@ -50,7 +63,7 @@ func (w *Window) Init(title string, x int32, y int32, width int32, height int32,
 		os.Exit(2)
 	}
 
-	w.Renderer, w.err = sdl.CreateRenderer(w.Window, -1, sdl.RENDERER_ACCELERATED|sdl.RENDERER_PRESENTVSYNC)
+	w.Renderer, w.err = sdl.CreateRenderer(w.Window, -1, sdl.RENDERER_ACCELERATED | sdl.RENDERER_PRESENTVSYNC)
 
 	if w.err != nil {
 		fmt.Fprintf(os.Stderr, "Failed to create renderer: %s\n", w.err)
@@ -85,16 +98,33 @@ func (w *Window) LoadTexture(path string) *sdl.Texture {
 }
 
 func (w *Window) LoadMedia() (err error) {
-	arrowTexture = LoadFromFile(w.Renderer, "./img/preview.png")
-	font, err := ttf.OpenFont("./fonts/Roboto-Medium.ttf", 28)
+	//arrowTexture = LoadFromFile(w.Renderer, "./img/preview.png")
 
-	if err != nil {
-		fmt.Println("Couldn't load the font...", err)
+	//font, err := ttf.OpenFont("./fonts/Roboto-Medium.ttf", 28)
+	//
+	//if err != nil {
+	//	fmt.Println("Couldn't load the font...", err)
+	//}
+	//
+	//textTexture = Init()
+	//textColor := sdl.Color{R: 0, G: 0, B: 0}
+	//textTexture.LoadFromRenderedText(w.Renderer, font, "Swaggerboi69", textColor)
+
+
+	//gButtonSpriteSheetTexture = NewTextureWrapper().LoadFromFile(w.Renderer, "./img/button.png")
+
+	gButtonSpriteSheetTexture = NewTextureWrapper().LoadFromFile(w.Renderer, "./img/button.png")
+
+	for i := 0; i < BUTTON_SPRITE_TOTAL; i++ {
+		gSpriteClips[i] = sdl.Rect{X: 0, Y: int32(i * 200), W: BUTTON_WIDTH, H: BUTTON_HEIGHT}
 	}
 
-	textTexture = Init()
-	textColor := sdl.Color{R: 0, G: 0, B: 0}
-	textTexture.LoadFromRenderedText(w.Renderer, font, "Swaggerboi69", textColor)
+	gButton[0] = NewMouseButton(0, 0)
+	gButton[1] = NewMouseButton(SCREEN_WIDTH - BUTTON_WIDTH, 0)
+	gButton[2] = NewMouseButton(0, SCREEN_HEIGHT - BUTTON_HEIGHT)
+	gButton[3] = NewMouseButton(SCREEN_WIDTH - BUTTON_WIDTH, SCREEN_HEIGHT - BUTTON_HEIGHT)
+
+	fmt.Println(gButton)
 
 	return nil
 }
@@ -103,20 +133,19 @@ func (w *Window) Render() {
 	w.Renderer.SetDrawColor(0xFF, 0xFF, 0xFF, 0xFF)
 	w.Renderer.Clear()
 
-	const (
-		SCREEN_WIDTH  = 640
-		SCREEN_HEIGHT = 480
-	)
-
-	arrowTexture.RenderEx(w.Renderer, (SCREEN_WIDTH-arrowTexture.width)/2, (SCREEN_HEIGHT-arrowTexture.height)/2, nil, degrees, nil, flipType)
-
-	if degrees != 0 {
-		textColor := sdl.Color{R: 0, G: 0, B: 0}
-		str := fmt.Sprintf("the row degress is %f", degrees)
-		textTexture.LoadFromRenderedText(w.Renderer, font, str, textColor)
+	for i := 0; i < TOTAL_BUTTONS; i++ {
+		gButton[i].Render(w.Renderer, gButtonSpriteSheetTexture)
 	}
 
-	textTexture.Render(w.Renderer, 0, 0, nil)
+	//arrowTexture.RenderEx(w.Renderer, (screenWidth - arrowTexture.width) / 2, (screenHeight - arrowTexture.height) / 2, nil, degrees, nil, flipType)
+
+	//if degrees != 0 {
+	//	textColor := sdl.Color{R: 0, G: 0, B: 0}
+	//	str := fmt.Sprintf("the row degress is %f", degrees)
+	//	textTexture.LoadFromRenderedText(w.Renderer, font, str, textColor)
+	//}
+	//
+	//textTexture.Render(w.Renderer, 0, 0, nil)
 
 	w.Renderer.Present()
 }
@@ -133,27 +162,16 @@ func (w *Window) EventHandler() {
 				w.Running = false
 			}
 
-			switch t.Keysym.Sym {
-			case sdl.K_a:
-				degrees -= 60
-				break
-
-			case sdl.K_d:
-				degrees += 60
-				break
-
-			case sdl.K_q:
-				flipType = sdl.FLIP_HORIZONTAL
-				break
-
-			case sdl.K_w:
-				flipType = sdl.FLIP_NONE
-				break
-
-			case sdl.K_e:
-				flipType = sdl.FLIP_VERTICAL
-				break
+		case *sdl.MouseMotionEvent:
+			for i := 0; i < TOTAL_BUTTONS; i++ {
+				gButton[i].HandleEvent(t.X, t.Y, t.Type)
 			}
+			break
+		case *sdl.MouseButtonEvent:
+			for i := 0; i < TOTAL_BUTTONS; i++ {
+				gButton[i].HandleEvent(t.X, t.Y, t.Type)
+			}
+			break
 		}
 	}
 }
@@ -164,11 +182,14 @@ func (w *Window) Update() {
 }
 
 func (w *Window) Clear() {
-	arrowTexture.Destroy()
+	//arrowTexture.Destroy()
+	gButtonSpriteSheetTexture.Destroy()
+	//textTexture.Destroy()
 
 	w.Renderer.Destroy()
 	w.Window.Destroy()
 
+	ttf.Quit()
 	img.Quit()
 	sdl.Quit()
 }
