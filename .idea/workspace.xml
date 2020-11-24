@@ -23,11 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="712a53ad-1b4a-48cd-a0cc-06c5c3ceb0a2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/game/texture_wrapper.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/foo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/viewport.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/colors.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/fadein.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/fadeout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/foo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/sprites.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/texture_wrapper.go" beforeDir="false" afterPath="$PROJECT_DIR$/game/texture_wrapper.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/window.go" beforeDir="false" afterPath="$PROJECT_DIR$/game/window.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
@@ -115,38 +118,38 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="551" y="195" width="804" height="686" key="#Plugins/0.0.1920.1080@0.0.1920.1080" timestamp="1605975992297" />
-    <state width="1844" height="219" key="GridCell.Tab.0.bottom" timestamp="1606089302391">
+    <state width="1844" height="219" key="GridCell.Tab.0.bottom" timestamp="1606243829525">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1844" height="219" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1606089302391" />
-    <state width="1844" height="219" key="GridCell.Tab.0.center" timestamp="1606089302390">
+    <state width="1844" height="219" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1606243829525" />
+    <state width="1844" height="219" key="GridCell.Tab.0.center" timestamp="1606243829524">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1844" height="219" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1606089302390" />
-    <state width="1844" height="219" key="GridCell.Tab.0.left" timestamp="1606089302389">
+    <state width="1844" height="219" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1606243829524" />
+    <state width="1844" height="219" key="GridCell.Tab.0.left" timestamp="1606243829523">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1844" height="219" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1606089302389" />
-    <state width="1844" height="219" key="GridCell.Tab.0.right" timestamp="1606089302391">
+    <state width="1844" height="219" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1606243829523" />
+    <state width="1844" height="219" key="GridCell.Tab.0.right" timestamp="1606243829525">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1844" height="219" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606089302391" />
-    <state width="1844" height="341" key="GridCell.Tab.1.bottom" timestamp="1606086846905">
+    <state width="1844" height="219" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606243829525" />
+    <state width="1844" height="341" key="GridCell.Tab.1.bottom" timestamp="1606090991941">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1844" height="341" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1606086846905" />
-    <state width="1844" height="341" key="GridCell.Tab.1.center" timestamp="1606086846904">
+    <state width="1844" height="341" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1606090991941" />
+    <state width="1844" height="341" key="GridCell.Tab.1.center" timestamp="1606090991940">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1844" height="341" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1606086846904" />
-    <state width="1844" height="341" key="GridCell.Tab.1.left" timestamp="1606086846904">
+    <state width="1844" height="341" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1606090991940" />
+    <state width="1844" height="341" key="GridCell.Tab.1.left" timestamp="1606090991939">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1844" height="341" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1606086846904" />
-    <state width="1844" height="341" key="GridCell.Tab.1.right" timestamp="1606086846905">
+    <state width="1844" height="341" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1606090991939" />
+    <state width="1844" height="341" key="GridCell.Tab.1.right" timestamp="1606090991941">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1844" height="341" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606086846905" />
+    <state width="1844" height="341" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1606090991941" />
     <state x="437" y="186" key="SettingsEditor" timestamp="1605970936611">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -155,9 +158,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="685" y="242" width="540" height="595" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1605789813822" />
-    <state x="623" y="267" width="672" height="678" key="search.everywhere.popup" timestamp="1606086573414">
+    <state x="623" y="267" width="672" height="678" key="search.everywhere.popup" timestamp="1606219666414">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="267" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1606086573414" />
+    <state x="623" y="267" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1606219666414" />
   </component>
 </project>

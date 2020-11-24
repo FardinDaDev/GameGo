@@ -4,12 +4,21 @@ import (
 	"fmt"
 	"github.com/veandco/go-sdl2/img"
 	"github.com/veandco/go-sdl2/sdl"
+	"github.com/veandco/go-sdl2/ttf"
 )
 
 type TextureWrapper struct {
 	texture *sdl.Texture
-	width int32
-	height int32
+	width   int32
+	height  int32
+}
+
+func Init() *TextureWrapper {
+	return &TextureWrapper{
+		texture: nil,
+		width: 0,
+		height: 0,
+	}
 }
 
 func LoadFromFile(renderer *sdl.Renderer, path string) (t *TextureWrapper) {
@@ -37,13 +46,63 @@ func LoadFromFile(renderer *sdl.Renderer, path string) (t *TextureWrapper) {
 	return t
 }
 
+func (t *TextureWrapper) SetBlendMode(blending sdl.BlendMode) {
+	t.texture.SetBlendMode(blending)
+}
+
+func (t *TextureWrapper) SetAlpha(alpha uint8) {
+	t.texture.SetAlphaMod(alpha)
+}
+
+func (t *TextureWrapper) SetColor(red, green, blue uint8) {
+	t.texture.SetColorMod(red, green, blue)
+}
+
+func (t *TextureWrapper) LoadFromRenderedText(renderer *sdl.Renderer, font *ttf.Font, textureText string, textureColor sdl.Color) {
+
+	textSurface, err := font.RenderUTF8Solid(textureText, textureColor)
+
+	if err != nil {
+		fmt.Println("Couldn't render SDL ttf text ", err)
+	}
+
+	newTexture, err := renderer.CreateTextureFromSurface(textSurface)
+
+	if err != nil {
+		fmt.Println("Couldn't renderer text from surface", err)
+	}
+
+	t.texture = newTexture
+	t.width = textSurface.W
+	t.height = textSurface.H
+
+	defer textSurface.Free()
+}
+
 func (t *TextureWrapper) Destroy() {
 	t.texture.Destroy()
 	t.width = 0
 	t.height = 0
 }
 
-func (t *TextureWrapper) Render(renderer *sdl.Renderer, x, y int32) {
+func (t *TextureWrapper) Render(renderer *sdl.Renderer, x, y int32, clip *sdl.Rect) {
 	dst := sdl.Rect{X: x, Y: y, W: t.width, H: t.height}
-	renderer.Copy(t.texture, nil, &dst)
+
+	if !clip.Empty() {
+		dst.W = clip.W
+		dst.H = clip.H
+	}
+
+	renderer.Copy(t.texture, clip, &dst)
+}
+
+func (t *TextureWrapper) RenderEx(renderer *sdl.Renderer, x, y int32, clip *sdl.Rect, angle float64, center *sdl.Point, flip sdl.RendererFlip) {
+	dst := sdl.Rect{X: x, Y: y, W: t.width, H: t.height}
+
+	if !clip.Empty() {
+		dst.W = clip.W
+		dst.H = clip.H
+	}
+
+	renderer.CopyEx(t.texture, clip, &dst, angle, center, flip)
 }
