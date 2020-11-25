@@ -136,7 +136,7 @@ func (w *Window) Render() {
 
 	//if degrees != 0 {
 	//	textColor := sdl.Color{R: 0, G: 0, B: 0}
-	//	str := fmt.Sprintf("%f", degrees)
+	//	str := fmt.Println(degrees)
 	//	textTexture.LoadFromRenderedText(w.Renderer, font, str, textColor)
 	//}
 	//
