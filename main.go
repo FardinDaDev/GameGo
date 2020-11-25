@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"github.com/FardinDaDev/GoGame/game"
+	"github.com/FardinDaDev/GoGame/logger"
 	"github.com/veandco/go-sdl2/sdl"
 )
 
@@ -12,7 +12,7 @@ func main()  {
 	w.NewWindow("Test", sdl.WINDOWPOS_UNDEFINED, sdl.WINDOWPOS_UNDEFINED, 1920, 1080, true)
 
 	if w.LoadMedia() != nil {
-		fmt.Println("Cannot load media")
+		logger.GameDir.Println("Cannot load media...")
 	}
 
 	for w.Running {

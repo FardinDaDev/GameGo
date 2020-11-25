@@ -2,6 +2,7 @@ package game
 
 import (
 	"fmt"
+	"github.com/FardinDaDev/GoGame/logger"
 	"github.com/veandco/go-sdl2/img"
 	"github.com/veandco/go-sdl2/sdl"
 	"github.com/veandco/go-sdl2/ttf"
@@ -32,7 +33,7 @@ func (t *TextureWrapper) LoadFromFile(renderer *sdl.Renderer, path string) ( *Te
 
 	newTexture, err := renderer.CreateTextureFromSurface(loadedSurface)
 	if err != nil {
-		fmt.Println("Error cannot create texture from surface:", err)
+		logger.GameDir.Println("Error cannot create texture from surface:", err)
 	}
 
 	t = &TextureWrapper{
@@ -59,25 +60,29 @@ func (t *TextureWrapper) SetColor(red, green, blue uint8) {
 }
 
 
-func (t *TextureWrapper) LoadFromRenderedText(renderer *sdl.Renderer, font *ttf.Font, textureText string, textureColor sdl.Color) {
+func (t *TextureWrapper) LoadFromRenderedText(renderer *sdl.Renderer, font *ttf.Font, textureText string, textureColor sdl.Color) *TextureWrapper {
 
 	textSurface, err := font.RenderUTF8Solid(textureText, textureColor)
 
 	if err != nil {
-		fmt.Println("Couldn't render SDL ttf text", err)
+		logger.GameDir.Println("Couldn't render SDL ttf text", err)
 	}
 
 	newTexture, err := renderer.CreateTextureFromSurface(textSurface)
 
 	if err != nil {
-		fmt.Println("Couldn't renderer text from surface", err)
+		logger.GameDir.Println("Couldn't renderer text from surface", err)
 	}
 
-	t.texture = newTexture
-	t.width = textSurface.W
-	t.height = textSurface.H
+	t = &TextureWrapper{
+		texture: newTexture,
+		width: textSurface.W,
+		height: textSurface.H,
+	}
 
 	defer textSurface.Free()
+
+	return t
 }
 
 func (t *TextureWrapper) Destroy() {
